@@ -1,0 +1,9 @@
+{
+  "description": "A WebGL-based 3D animated short film created for the Computer Graphics lab at JKU Linz, featuring heightmap terrain generation, dynamic lighting, and a multi-scene story with portals and an alien planet.",
+  "featured": false,
+  "tags": ["javascript", "webgl", "3d", "computer-graphics", "animation", "university"],
+  "images": [
+    "https://picsum.photos/seed/cglab1/800/450",
+    "https://picsum.photos/seed/cglab2/800/450"
+  ]
+}
