@@ -30,8 +30,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/mrcodeeU/cg-lab-2023-project-reineggersilber:latest
-            ghcr.io/mrcodeeU/cg-lab-2023-project-reineggersilber:${{ github.sha }}
+            ghcr.io/mrcodeeu/cg-lab-2023-project-reineggersilber:latest
+            ghcr.io/mrcodeeu/cg-lab-2023-project-reineggersilber:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
