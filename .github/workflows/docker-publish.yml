@@ -3,6 +3,10 @@ name: Build and Deploy
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    # weekly rebuild so base-image security fixes reach the deployed image
+    - cron: '17 3 * * 1'
 
 jobs:
   build-and-push:
@@ -32,6 +36,8 @@ jobs:
           tags: |
             ghcr.io/mrcodeeu/cg-lab-2023-project-reineggersilber:latest
             ghcr.io/mrcodeeu/cg-lab-2023-project-reineggersilber:${{ github.sha }}
+          # scheduled/manual runs skip the layer cache, otherwise apk/apt layers stay frozen
+          no-cache: ${{ github.event_name != 'push' }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
